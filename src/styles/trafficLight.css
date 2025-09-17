@@ -37,5 +37,13 @@
 
 .selected{
       opacity: 1;
-  box-shadow: 0 0 40px white;
+  box-shadow: 0 0 40px lightblue,
+    0 0 60px yellow;
+}
+.purple{
+    background-color: purple;
+}
+
+.addPurple {
+    margin-top: 10px;
 }

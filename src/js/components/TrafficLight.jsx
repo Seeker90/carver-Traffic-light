@@ -4,6 +4,8 @@ import { useState } from "react";
 
 const TrafficLight = () => {
     const [color, setColor] = useState('')
+    const [showPurple, setShowPurple] = useState(false)
+
     return(
         <>
             <div className="traffic-light-stem "></div>
@@ -20,8 +22,17 @@ const TrafficLight = () => {
                     className={`color ${color === "green" ? "light green selected" : "light green"}`}
                     onClick={() => setColor("green")}
                 ></div>
+                {showPurple &&(
+                    <div 
+                        className={`color ${color === "purple" ? "light purple selected" : "light purple"}`}
+                        onClick={() => setColor("purple")}
+                    ></div>
+                )}
             </div>
+            <button 
+                className="addPurple" 
+                onClick={()=> setShowPurple(true)}>Add the color Purple!</button>
         </>
-)
+    )
 }
 export default TrafficLight;
